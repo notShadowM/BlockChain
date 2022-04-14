@@ -91,7 +91,7 @@ class BlockChain{
     private List<String> unconfirmedTransaction = new ArrayList<>();
 
     public BlockChain() {
-        String path = "C:\\Users\\hp\\Documents\\NetBeansProjects\\MongoProject\\BlockChain\\src\\main\\java\\BlockChainStructure\\output.txt";
+        String path = "C:\\Users\\hp\\Documents\\NetBeansProjects\\BlockChainProjects\\BlockChain\\src\\main\\java\\BlockChainStructure\\output.txt";
         try {
             BufferedReader bufReader = new BufferedReader(new FileReader(path));
             String line = bufReader.readLine(); 
@@ -152,7 +152,7 @@ class BlockChain{
     
     public void saveBlockChain() {
         try { 
-            String path = "C:\\Users\\hp\\Documents\\NetBeansProjects\\MongoProject\\BlockChain\\src\\main\\java\\BlockChainStructure\\output.txt";
+            String path = "C:\\Users\\hp\\Documents\\NetBeansProjects\\BlockChainProjects\\BlockChain\\src\\main\\java\\BlockChainStructure\\output.txt";
             FileWriter writer = new FileWriter(path);
             for(Block str: chain) {
                 writer.write(str.getData() + System.lineSeparator());
@@ -212,8 +212,8 @@ class BlockChain{
 public class Main {
     public static void main(String[] args) {
         BlockChain blockChain = new BlockChain();
-        blockChain.addNewTransaction("send 200btc to Alaa");
-        blockChain.addNewTransaction("take 10 btc from Alaa");
+        blockChain.addNewTransaction("send 200btc to Aballah");
+        blockChain.addNewTransaction("take 10 btc from Aballah");
         blockChain.mine();
     }
 }
